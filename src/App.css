@@ -273,7 +273,7 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  height: 440px;
+  height: 300px;
 }
 
 .chatbot-popup.show {
