@@ -6,14 +6,14 @@ COPY . .
 RUN npm install
 RUN npm run build
 
-# Step 2: Set up Nginx to serve the app
-FROM nginx:alpine
+# # Step 2: Set up Nginx to serve the app
+# FROM nginx:alpine
 
-# Copy custom nginx.conf to replace the default
-COPY nginx.conf /etc/nginx/nginx.conf
+# # Copy custom nginx.conf to replace the default
+# COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy the built React app to Nginx's default html directory
-COPY --from=build /app/build /usr/share/nginx/html
+# # Copy the built React app to Nginx's default html directory
+# COPY --from=build /app/build /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
