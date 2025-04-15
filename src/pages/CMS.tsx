@@ -21,7 +21,7 @@ const CMS = () => {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:3333/content");
+        const response = await fetch("https://chatbotbackend-1wds.onrender.com/content");
         if (!response.ok) {
           throw new Error("Failed to fetch content");
         }
@@ -52,7 +52,7 @@ const CMS = () => {
     
     if (confirmed) {
       try {
-        const res = await fetch(`http://127.0.0.1:3333/content/${contentToDelete.id}`, {
+        const res = await fetch(`https://chatbotbackend-1wds.onrender.com/content/${contentToDelete.id}`, {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',
@@ -90,7 +90,7 @@ const CMS = () => {
     };
   
     try {
-      const res = await fetch('http://127.0.0.1:3333/content', {
+      const res = await fetch('https://chatbotbackend-1wds.onrender.com/content', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
